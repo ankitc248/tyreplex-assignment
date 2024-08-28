@@ -1,0 +1,118 @@
+[
+  {
+    "title": "Car Tyres",
+    "dropdown": {
+      "dropDownTitle": "Popular tyre brands",
+      "items": [
+        {
+          "name": "MRF Tyres",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/mrf-tyres",
+          "sticker": "Sale"
+        },
+        {
+          "name": "Ceat Tyres",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/ceat-tyres"
+        },
+        {
+          "name": "Apollo Tyres",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/apollo-tyres"
+        },
+        {
+          "name": "Bridgestone Tyres",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/bridgestone-tyres"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Bike Tyres",
+    "dropdown": {
+      "dropDownTitle": "Popular tyre brands",
+      "items": [
+        {
+          "name": "MRF Tyres",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/mrf-tyres"
+        },
+        {
+          "name": "Ceat Tyres",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/ceat-tyres"
+        },
+        {
+          "name": "Apollo Tyres",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/apollo-tyres"
+        },
+        {
+          "name": "Bridgestone Tyres",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/bridgestone-tyres",
+          "sticker": "New"
+        },
+        {
+          "name": "Bridgestone Tyres",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/bridgestone-tyres"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Tyre Pressure",
+    "link": "https://www.tyreplex.com/tyre-dealers-in-india/shree-hemkunt-tyres-and-services"
+  },
+  {
+    "title": "Commercial Tyres",
+    "link": "https://www.tyreplex.com/tyre-dealers-in-india/shree-hemkunt-tyres-and-services",
+    "dropdown": {
+      "items": [
+        {
+          "name": "All commercial tyres",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/mrf-tyres"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Accessories",
+    "dropdown": {
+      "items": [
+        {
+          "name": "MRF Tyres",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/mrf-tyres"
+        },
+        {
+          "name": "Ceat Tyres",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/ceat-tyres"
+        },
+        {
+          "name": "Apollo Tyres",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/apollo-tyres"
+        },
+        {
+          "name": "Bridgestone Tyres",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/bridgestone-tyres"
+        }
+      ]
+    }
+  },
+  {
+    "title": "More",
+    "dropdown": {
+      "items": [
+        {
+          "name": "MRF Tyres",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/mrf-tyres"
+        },
+        {
+          "name": "Ceat Tyres",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/ceat-tyres"
+        },
+        {
+          "name": "Apollo Tyres",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/apollo-tyres"
+        },
+        {
+          "name": "Bridgestone Tyres",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/bridgestone-tyres"
+        }
+      ]
+    }
+  }
+]
