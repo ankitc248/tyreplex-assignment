@@ -29,7 +29,14 @@ const Shop = () => {
   );
 };
 
-const ShopDetails = ({ shopName, rating, reviews, cleanedShopAddress, days, timing }) => (
+const ShopDetails = ({
+  shopName,
+  rating,
+  reviews,
+  cleanedShopAddress,
+  days,
+  timing,
+}) => (
   <div className="flex flex-col p-5 gap-2">
     <ShopHeader shopName={shopName} rating={rating} reviews={reviews} />
     <MobileImageGrid />
@@ -102,10 +109,7 @@ const Address = ({ cleanedShopAddress }) => (
       Address
     </h3>
     {cleanedShopAddress.map((address, index) => (
-      <span
-        key={index}
-        className="text-sm text-neutral-500 capitalize"
-      >
+      <span key={index} className="text-sm text-neutral-500 capitalize">
         {address}
       </span>
     ))}
@@ -132,7 +136,10 @@ const Timings = ({ days, timing }) => (
 const ActionButtons = () => (
   <div className="flex gap-4 mt-4 lg:mt-auto flex-wrap">
     <ActionButton text="Call now" icon="/assets/svg-icons/phone.svg" />
-    <ActionButton text="Get directions" icon="/assets/svg-icons/location-arrow-accent.svg" />
+    <ActionButtonOpposite
+      text="Get directions"
+      icon="/assets/svg-icons/location-arrow-accent.svg"
+    />
   </div>
 );
 
@@ -147,7 +154,22 @@ const ActionButton = ({ text, icon }) => (
       alt={text.toLowerCase()}
       width={15}
       height={15}
-      className="group-hover:brightness-0 group-hover:invert group-hover:scale-105"
+      className="group-hover:brightness-0 group-hover:invert group-hover:scale-125"
+    />
+  </button>
+);
+const ActionButtonOpposite = ({ text, icon }) => (
+  <button
+    type="button"
+    className="group rounded border-accent border-2 bg-accent text-white font-medium p-3 px-4 md:p-2.5 md:px-4 w-full sm:w-64 mb-2 text-sm hover:bg-black hover:border-black transition-all inline-flex gap-2 justify-between items-center shadow"
+  >
+    {text}
+    <img
+      src={icon}
+      alt={text.toLowerCase()}
+      width={15}
+      height={15}
+      className="brightness-0 invert group-hover:scale-125"
     />
   </button>
 );
@@ -168,7 +190,11 @@ const ImageGrid = () => {
   return (
     <div className="flex-col shadow-left w-full hidden sm:flex lg:w-[510px]">
       <img src={shopImages[activeImage]} alt="shop" />
-      <ImageThumbnails shopImages={shopImages} activeImage={activeImage} replaceImage={replaceImage} />
+      <ImageThumbnails
+        shopImages={shopImages}
+        activeImage={activeImage}
+        replaceImage={replaceImage}
+      />
     </div>
   );
 };
@@ -189,7 +215,11 @@ const MobileImageGrid = () => {
   return (
     <div className="flex flex-col shadow-left w-full sm:hidden my-2">
       <img src={shopImages[activeImage]} alt="shop" />
-      <ImageThumbnails shopImages={shopImages} activeImage={activeImage} replaceImage={replaceImage} />
+      <ImageThumbnails
+        shopImages={shopImages}
+        activeImage={activeImage}
+        replaceImage={replaceImage}
+      />
     </div>
   );
 };

@@ -11,11 +11,11 @@ export default function Footer() {
             <input
               type="text"
               placeholder="Ask anything related to tires"
-              className="w-full md:w-96 bg-white rounded border p-2 text-sm focus:outline focus:outline-accent/50"
+              className="w-full md:w-96 bg-white rounded border p-2 text-sm focus:outline focus:outline-accent/75"
             />
             <button
               type="button"
-              className="text-xs font-medium bg-accent text-white rounded p-2 px-3"
+              className="text-xs font-medium bg-accent text-white rounded p-2 px-3 hover:bg-black"
             >
               Send
             </button>
