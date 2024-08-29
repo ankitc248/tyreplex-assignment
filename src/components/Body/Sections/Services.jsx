@@ -8,7 +8,7 @@ export default function Services() {
   return (
     <section className="rounded bg-white shadow overflow-hidden p-4">
       <h3 className="text-xl font-medium">Services offered</h3>
-      <p className="text-neutral-400 text-xs mt-1">
+      <p className="text-neutral-500 text-xs">
         Wide range of expert services, from maintenance and repairs
         to custom solutions, ensuring top performance and customer satisfaction.
       </p>

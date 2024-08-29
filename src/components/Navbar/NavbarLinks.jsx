@@ -18,7 +18,7 @@ function NavbarLink({ details, index }) {
 
   return (
     <li
-      className="text-sm self-end text-nowrap border-b-2 border-transparent hover:bg-slate-100 hover:border-accent rounded-t relative w-auto"
+      className="text-sm text-nowrap border-b-2 border-transparent hover:bg-slate-100 hover:border-accent rounded-t relative w-auto h-14"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       aria-haspopup={!!details.dropdown}
@@ -26,14 +26,14 @@ function NavbarLink({ details, index }) {
       {details.link ? (
         <a
           href={details.link}
-          className="hover:cursor-pointer font-medium flex h-8 p-2 pb-8"
+          className="hover:cursor-pointer font-medium flex h-full p-2 items-center"
           target="_blank"
           rel="noopener noreferrer"
         >
           {details.title}
         </a>
       ) : (
-        <span className="font-medium flex h-8 p-2 pb-8">{details.title}</span>
+        <span className="font-medium flex h-full p-2 items-center">{details.title}</span>
       )}
 
       {details.dropdown && showDropDown && (
@@ -49,7 +49,7 @@ function NavbarLink({ details, index }) {
 function DropDownMenu({ details, direction }) {
   return (
     <div
-      className={`absolute top-[42px] z-10 ${direction} bg-white rounded-b text-sm shadow shadow-gray-300 p-2 w-max animate-swipe-up opacity-0 z-50`}
+      className={`absolute top-[56px] z-10 ${direction} bg-white rounded-b text-sm shadow shadow-gray-300 p-2 w-max animate-swipe-up opacity-0 z-50`}
     >
       {details.dropDownTitle && (
         <span className="inline-block p-3 uppercase w-auto text-xs">

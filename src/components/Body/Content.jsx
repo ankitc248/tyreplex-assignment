@@ -3,6 +3,7 @@ import Services from "./Sections/Services";
 import BreadCrumbs from "./BreadCrumbs";
 import Tyres from "./Sections/Tyres";
 import Footer from "../Footer/Footer";
+import Reviews from "./Sections/Reviews";
 export default function Content() {
   return (
     <div className="flex items-center justify-center">
@@ -11,6 +12,7 @@ export default function Content() {
         <Shop />
         <Services />
         <Tyres />
+        <Reviews />
         <Footer />
       </div>
     </div>

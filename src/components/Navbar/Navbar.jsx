@@ -6,16 +6,16 @@ export default function Navbar() {
   const [showNavbar, setShowNavbar] = useState(false);
   return (
     <>
-      <nav className="bg-white pt-3 flex w-dvw justify-center content-center shadow shadow-gray-300 sticky top-0 z-50">
-        <div className="max-w-screen-xl w-dvw flex justify-between items-center flex-wrap px-4">
+      <nav className="bg-white flex w-dvw justify-center content-center shadow shadow-gray-300 sticky top-0 z-50">
+        <div className="max-w-screen-xl w-dvw flex justify-between items-center flex-wrap px-4 py-4 lg:py-0">
           <Logo />
           <NavbarLinks links={navbarLinks} />
           <button
             type="button"
-            className="rounded font-medium text-white mb-2 text-sm inline-flex lg:hidden"
+            className="rounded font-medium text-white text-sm inline-flex lg:hidden self-center"
             onClick={() => setShowNavbar(!showNavbar)}
           >
-            <img src="/assets/svg-icons/menu.svg" width={24} height={24} />
+            <img src="/assets/svg-icons/menu-fries.svg" width={36} height={36} />
           </button>
           <LoginButton />
         </div>
@@ -49,7 +49,7 @@ function LoginButton() {
     <div className="hidden lg:flex">
       <button
         type="button"
-        className="rounded bg-accent font-medium py-1.5 text-white px-3 mb-2 text-xs hover:bg-black inline-flex gap-2 items-center"
+        className="rounded bg-accent font-medium py-1.5 text-white px-3 text-xs hover:bg-neutral-700 inline-flex gap-2 items-center shadow"
       >
         <img
           src="/assets/svg-icons/user-circle-white.svg"

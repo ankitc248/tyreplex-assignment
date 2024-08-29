@@ -66,14 +66,17 @@ const VerifiedIcon = () => (
       alt="verified"
       width={20}
       height={20}
-      className="relative top-0.5 ml-1"
+      className="relative top-0.5 ml-1 cursor-pointer drop-shadow peer"
     />
+    <span className="hidden md:inline-flex text-xs p-1 px-2 absolute rounded-full shadow bg-accent whitespace-nowrap font-medium text-white left-7 top-0 peer-hover:animate-swipe-in-navbar opacity-0">
+      TyrePlex verified
+    </span>
   </div>
 );
 
 const RatingDisplay = ({ rating, reviews }) => (
-  <div className="flex gap-2 items-center hover:cursor-pointer">
-    <span className="inline-flex gap-1 text-white font-semibold bg-green-500 text-xs rounded-sm px-1 py-0.5 shadow-sm">
+  <a className="flex gap-2 items-center hover:cursor-pointer" href="#ratingsSection">
+    <span className="inline-flex gap-1 text-white font-semibold bg-green-600 text-xs rounded-sm px-1 py-0.5 shadow-sm">
       {rating}
       <img
         src="/assets/svg-icons/star-blocky.svg"
@@ -86,7 +89,7 @@ const RatingDisplay = ({ rating, reviews }) => (
     <span className="text-xs font-bold text-neutral-500">
       {reviews} Ratings
     </span>
-  </div>
+  </a>
 );
 
 const AddressAndTimings = ({ cleanedShopAddress, days, timing }) => (
@@ -161,7 +164,7 @@ const ActionButton = ({ text, icon }) => (
 const ActionButtonOpposite = ({ text, icon }) => (
   <button
     type="button"
-    className="group rounded border-accent border-2 bg-accent text-white font-medium p-3 px-4 md:p-2.5 md:px-4 w-full sm:w-64 mb-2 text-sm hover:bg-black hover:border-black transition-all inline-flex gap-2 justify-between items-center shadow"
+    className="group rounded border-accent border-2 bg-accent text-white font-medium p-3 px-4 md:p-2.5 md:px-4 w-full sm:w-64 mb-2 text-sm hover:bg-neutral-700 hover:border-neutral-700 transition-all inline-flex gap-2 justify-between items-center shadow"
   >
     {text}
     <img

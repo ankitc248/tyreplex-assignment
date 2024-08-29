@@ -2,12 +2,12 @@ export default function Footer() {
   return (
     <footer className="rounded-t bg-white shadow overflow-hidden">
       <div className="flex justify-between flex-wrap p-4 items-start gap-4">
-        <div className="flex flex-col gap-2 order-2 sm:order-1 w-full md:w-auto">
-          <span className="text-sm">Have a question about Tyres?</span>
+        <div className="flex flex-col gap-1 order-2 sm:order-1 w-full md:w-auto">
+          <span className="text">Have a question about Tyres?</span>
           <span className="text-xs text-neutral-400">
             Get an answer in 24 hours from our experts.
           </span>
-          <div className="flex gap-2 w-full">
+          <div className="flex gap-2 w-full mt-2">
             <input
               type="text"
               placeholder="Ask anything related to tires"
@@ -15,7 +15,7 @@ export default function Footer() {
             />
             <button
               type="button"
-              className="text-xs font-medium bg-accent text-white rounded p-2 px-3 hover:bg-black"
+              className="text-xs font-medium bg-accent text-white rounded shadow p-2 px-3 hover:bg-neutral-700"
             >
               Send
             </button>
@@ -68,6 +68,9 @@ export default function Footer() {
           <a href="#">Contact Us</a>
           <a href="#">Career</a>
         </div>
+      </div>
+      <div className="text-xs text-center p-4 border-t text-neutral-500">
+        ©2024 TyrePlex Technologies & Commerce Pvt. Ltd. All Rights Reserved.
       </div>
     </footer>
   );
