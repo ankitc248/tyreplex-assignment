@@ -97,7 +97,7 @@ const ReviewHeader = ({ totalRating, totalReviews }) => (
         Rate Dealer
       </button>
     </div>
-    <div className="flex gap-4 items-center mt-4">
+    <div className="flex gap-3 items-center mt-4 flex-wrap">
       <StarBlock rating={totalRating} />
       <div className="flex text-4xl font-light gap-2 p-1">
         {totalRating} / 5

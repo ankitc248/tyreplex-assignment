@@ -167,7 +167,7 @@ const ActionButton = ({ text, icon }) => (
       alt={text.toLowerCase()}
       width={15}
       height={15}
-      className="group-hover:brightness-0 group-hover:invert group-hover:scale-125"
+      className="group-hover:brightness-0 group-hover:invert group-hover:scale-125 transition"
     />
   </button>
 );
@@ -183,7 +183,7 @@ const ActionButtonOpposite = ({ text, icon }) => (
       alt={text.toLowerCase()}
       width={15}
       height={15}
-      className="brightness-0 invert group-hover:scale-125"
+      className="brightness-0 invert group-hover:scale-125 transition"
     />
   </button>
 );
