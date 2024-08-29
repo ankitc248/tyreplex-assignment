@@ -2,10 +2,10 @@ const CardTop = ({ tyre }) => (
   <div className="bg-accent/5 relative items-center justify-center flex py-6">
     <img
       loading="lazy"
-      src="/assets/images/img_main.png"
-      alt="heart"
+      src={tyre.image}
+      alt="tyre"
       width={100}
-      className="drop-shadow"
+      className="mix-blend-multiply"
     />
     <div className="absolute left-0 bottom-0 p-2 bg-white rounded-r-full overflow-hidden shadow-sm">
       <img loading="lazy" src={tyre.logo} width={50} />
@@ -43,10 +43,10 @@ const CardBottom = ({ tyre }) => (
     <div className="flex flex-col gap-2">
       <div className="text-md font-medium uppercase pl-1">{tyre.name}</div>
       <div className="flex gap-2 mb-4 flex-wrap">
-        <div className="text-xs p-1 px-3 text-neutral-900 shadow bg-white rounded w-fit">
+        <div className="text-xs p-1 px-3 text-neutral-900 shadow bg-white rounded w-fit font-medium">
           {tyre.size}
         </div>
-        <div className="text-xs p-1 px-3 text-neutral-900 shadow bg-white rounded w-fit">
+        <div className="text-xs p-1 px-3 text-neutral-900 shadow bg-white rounded w-fit font-medium">
           {tyre.tubes}
         </div>
       </div>

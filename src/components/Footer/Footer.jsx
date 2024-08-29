@@ -2,7 +2,7 @@ const FooterQuestionSection = () => {
   return (
     <div className="flex flex-col gap-1 order-2 sm:order-1 w-full md:w-auto">
       <span className="text">Have a question about Tyres?</span>
-      <span className="text-xs text-neutral-400">
+      <span className="text-xs text-neutral-500">
         Get an answer in 24 hours from our experts.
       </span>
       <div className="flex gap-2 w-full mt-2">

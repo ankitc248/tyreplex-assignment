@@ -16,17 +16,17 @@ export default function Services() {
         {services.map((service, index) => (
           <li
             key={index}
-            className="text-sm rounded shadow-sm border border-neutral-300 group font-medium text-neutral-600 capitalize hover:font-semibold hover:cursor-pointer hover:bg-slate-100 bg-slate-50"
+            className="text-sm rounded shadow-sm border border-neutral-300 group font-medium text-neutral-700 capitalize hover:font-semibold hover:cursor-pointer hover:bg-slate-100 bg-slate-50"
           >
-            <a href="#" className="flex justify-between p-3 whitespace-nowrap">
+            <a href="#" className="flex justify-between p-3 whitespace-nowrap font-medium">
               {service.toLocaleLowerCase()}
-              <div className="inline-flex gap-1 text-xs items-center opacity-0 group-hover:animate-swipe-in text-neutral-600">
+              <div className="inline-flex gap-1 text-xs items-center opacity-0 group-hover:animate-swipe-in text-neutral-600 font-medium">
                 Book now
                 <img
                   loading="lazy"
                   src="/assets/svg-icons/chevron-up.svg"
                   alt="arrow"
-                  className="rotate-90 contrast-0 group-hover:animate-swipe-in-arrow opacity-0"
+                  className="rotate-90 contrast-50 group-hover:animate-swipe-in-arrow opacity-0"
                   width={10}
                   height={10}
                 />

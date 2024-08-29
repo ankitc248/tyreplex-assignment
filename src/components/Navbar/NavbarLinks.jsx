@@ -52,7 +52,7 @@ function DropDownMenu({ details, direction }) {
       className={`absolute top-[56px] z-10 ${direction} bg-white rounded-b text-sm shadow shadow-gray-300 p-2 w-max animate-swipe-up opacity-0 z-50`}
     >
       {details.dropDownTitle && (
-        <span className="inline-block p-3 uppercase w-auto text-xs">
+        <span className="inline-block p-3 uppercase w-auto text-xs font-semibold">
           {details.dropDownTitle}
         </span>
       )}
@@ -80,7 +80,7 @@ function DropDownItem({ item }) {
       >
         {item.name}
         {item.sticker && (
-          <span className="text-xxs uppercase text-white px-1 bg-accent rounded-sm">
+          <span className="text-xxs uppercase text-white px-1 bg-accent rounded-sm font-medium">
             {item.sticker}
           </span>
         )}

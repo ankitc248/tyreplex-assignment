@@ -36,7 +36,7 @@ const BrandsFilter = ({ brands, brandsSelected, setBrandsSelected }) => {
       <button
         type="button"
         id="brandsFilter"
-        className="text-xs p-1 px-2 h-9 border border-neutral-400 bg-white shadow rounded inline-flex gap-1 items-center hover:border-accent hover:text-accent"
+        className="text-xs p-1 px-2 h-9 border border-neutral-400 bg-white shadow rounded inline-flex gap-1 items-center hover:border-accent hover:text-accent font-medium"
         onClick={() => {
           setBrandsDropdown(true);
           setTempBrands(brandsSelected);
@@ -52,7 +52,7 @@ const BrandsFilter = ({ brands, brandsSelected, setBrandsSelected }) => {
       {brandsDropdown && (
         <div
           id="brandsDropdown"
-          className="flex gap-2 flex-col text-xs bg-white rounded shadow-xl w-full max-w-[500px] h-64 absolute z-50 top-11 overflow-hidden justify-between border animate-swipe-up"
+          className="flex gap-2 flex-col text-xs bg-white rounded-md shadow-xl w-full max-w-[500px] h-64 absolute z-50 top-11 overflow-hidden justify-between border animate-swipe-up"
         >
           <div className="flex justify-between items-center w-full p-3 py-2 text-xs border-b bg-slate-50 font-semibold text-neutral-950">
             Select brands
@@ -109,14 +109,14 @@ const BrandsFilter = ({ brands, brandsSelected, setBrandsSelected }) => {
 
 const SortByFilter = ({ sortBy }) => (
   <select
-    className="text-xs rounded shadow border border-neutral-400"
+    className="text-xs rounded shadow border border-neutral-400 font-medium"
     aria-placeholder="Sort by"
   >
     <option value="" disabled>
       Sort by
     </option>
     {sortBy.map((sort, index) => (
-      <option key={index} value={sort.value}>
+      <option key={index} value={sort.value} className="font-medium">
         {sort.label}
       </option>
     ))}
@@ -127,18 +127,18 @@ const SearchBar = ({ searchTypes }) => (
   <div className="flex shadow">
     <input
       type="text"
-      className="text-xs rounded-l border border-neutral-400 shadow-inner w-36 sm:w-auto"
+      className="text-xs rounded-l border border-neutral-400 shadow-inner w-36 sm:w-auto font-medium"
       placeholder="Type here..."
     />
     <select
-      className="text-xs border-y border-x-0 rounded-none border-neutral-400"
+      className="text-xs border-y border-x-0 rounded-none border-neutral-400 font-medium"
       aria-placeholder="Search type"
     >
       <option value="" disabled>
         Search type
       </option>
       {searchTypes.map((type, index) => (
-        <option key={index} value={type.value}>
+        <option key={index} value={type.value} className="font-medium">
           {type.label}
         </option>
       ))}
@@ -147,13 +147,13 @@ const SearchBar = ({ searchTypes }) => (
       type="button"
       className="text-xs p-2 rounded-r items-center bg-accent text-white font-medium shadow hover:bg-neutral-700 inline-flex gap-1"
     >
-      Search
       <img
         src="/assets/svg-icons/search.svg"
         alt="search"
-        width={16}
+        width={20}
         className="invert hidden sm:inline-block"
       />
+      Search
     </button>
   </div>
 );

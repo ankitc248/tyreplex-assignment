@@ -148,7 +148,7 @@ const DropdownItem = ({ item }) => (
     <span className="flex gap-2 text-sm">
       {item.name}
       {item.sticker && (
-        <span className="text-xxs uppercase text-white px-2 bg-accent rounded-sm">
+        <span className="text-xxs uppercase text-white px-2 bg-accent rounded-sm font-medium">
           {item.sticker}
         </span>
       )}
