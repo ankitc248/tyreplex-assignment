@@ -1,76 +1,170 @@
 import { useState } from "react";
-import Select from "react-select";
 import Spinner from "../../Spinner";
+import { brandsData, searchTypesData, sortByData, tyresData } from "./Data";
+import TyreCard from "./TyreCard";
+
+const BrandsFilter = ({ brands, brandsSelected, setBrandsSelected }) => {
+  const [brandsDropdown, setBrandsDropdown] = useState(false);
+  const [tempBrands, setTempBrands] = useState(brands);
+
+  const selectBrand = (value) => {
+    setTempBrands(
+      tempBrands.includes(value)
+        ? tempBrands.filter((brand) => brand !== value)
+        : [...tempBrands, value]
+    );
+  };
+
+  const applyFilter = () => {
+    setBrandsDropdown(false);
+    setBrandsSelected(tempBrands);
+  };
+
+  return (
+    <>
+      <button
+        type="button"
+        className="text-xs p-1 px-2 h-9 border border-neutral-400 bg-white shadow rounded inline-flex gap-1 items-center hover:border-accent hover:text-accent"
+        onClick={() => {
+          setBrandsDropdown(true);
+          setTempBrands(brandsSelected);
+        }}
+      >
+        Filter by brands
+        {brandsSelected.length > 0 && (
+          <span className="bg-accent text-white p-1 px-1.5 rounded-sm font-semibold">
+            {brandsSelected.length}
+          </span>
+        )}
+      </button>
+      {brandsDropdown && (
+        <div className="flex gap-2 flex-col text-xs bg-white rounded shadow-xl w-full max-w-[500px] h-64 absolute z-50 top-11 overflow-hidden justify-between border animate-swipe-up">
+          <div className="flex justify-between items-center w-full p-3 py-2 text-xs border-b bg-slate-50">
+            Select brands
+            <button
+              className=""
+              type="button"
+              onClick={() => setBrandsDropdown(false)}
+            >
+              <img
+                src="/assets/svg-icons/close.svg"
+                alt=""
+                width={18}
+                className="contrast-50"
+              />
+            </button>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 p-3 overflow-y-auto">
+            {brands.map((brand, index) => (
+              <div className="" key={index}>
+                <label className="inline-flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    className="bg-white border-2 focus:outline-accent focus-visible:outline-accent border-accent rounded cursor-pointer outline-accent outline-offset-2 hover:outline hover:outline-2 checked:bg-accent"
+                    value={brand.value}
+                    checked={tempBrands.includes(brand.value)}
+                    onChange={() => selectBrand(brand.value)}
+                  />
+                  {brand.label}
+                </label>
+              </div>
+            ))}
+          </div>
+          <div className="flex gap-2 p-3 justify-end bg-slate-50 border-t">
+            <button
+              type="button"
+              className="bg-white p-1 px-2 shadow rounded"
+              onClick={() => setTempBrands([])}
+            >
+              Clear All
+            </button>
+            <button
+              type="button"
+              className="bg-accent p-1 px-2 text-white rounded shadow hover:bg-neutral-700"
+              onClick={applyFilter}
+            >
+              Filter
+            </button>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
+const SortByFilter = ({ sortBy }) => (
+  <select
+    className="text-xs rounded shadow border border-neutral-400"
+    aria-placeholder="Sort by"
+  >
+    <option value="" disabled>
+      Sort by
+    </option>
+    {sortBy.map((sort, index) => (
+      <option key={index} value={sort.value}>
+        {sort.label}
+      </option>
+    ))}
+  </select>
+);
+
+const SearchBar = ({ searchTypes }) => (
+  <div className="flex shadow">
+    <input
+      type="text"
+      className="text-xs rounded-l border border-neutral-400 shadow-inner"
+      placeholder="Type here..."
+    />
+    <select
+      className="text-xs border-y border-x-0 rounded-none border-neutral-400"
+      aria-placeholder="Search type"
+    >
+      <option value="" disabled>
+        Search type
+      </option>
+      {searchTypes.map((type, index) => (
+        <option key={index} value={type.value}>
+          {type.label}
+        </option>
+      ))}
+    </select>
+    <button
+      type="button"
+      className="text-xs p-2 rounded-r items-center bg-accent text-white font-medium shadow hover:bg-neutral-700 inline-flex gap-1"
+    >
+      Search
+      <img
+        src="/assets/svg-icons/search.svg"
+        alt="search"
+        width={16}
+        className="invert"
+      />
+    </button>
+  </div>
+);
+
+const Filters = () => {
+  const [brandsSelected, setBrandsSelected] = useState([]);
+
+  return (
+    <div className="flex gap-3 mt-4 flex-wrap relative justify-between">
+      <div className="flex gap-3 flex-wrap">
+        <BrandsFilter
+          brands={brandsData}
+          brandsSelected={brandsSelected}
+          setBrandsSelected={setBrandsSelected}
+        />
+        <SortByFilter sortBy={sortByData} />
+      </div>
+      <SearchBar searchTypes={searchTypesData} />
+    </div>
+  );
+};
+
 export default function Tyres() {
-  const [tyres, setTyres] = useState([
-    {
-      id: 1,
-      brand: "apollo",
-      vehicleType: "Car",
-      name: "Amazer 4g life",
-      image: "/assets/images/img_main.jpg",
-      logo: "/assets/images/apollo-logo.png",
-      rating: 4.5,
-      reviews: 10,
-      price: "3,800",
-      quantity: 1,
-      warranty: 5,
-      onSale: true,
-      tubes: "Tubeless",
-      size: "215/45R17",
-    },
-    {
-      id: 2,
-      brand: "mrf",
-      vehicleType: "Car",
-      name: "Amazer 4g life",
-      image: "/assets/images/img_main.jpg",
-      logo: "/assets/images/mrf-logo.png",
-      rating: 4.5,
-      reviews: 10,
-      price: "3,800",
-      quantity: 1,
-      warranty: 5,
-      onSale: false,
-      tubes: "Tubeless",
-      size: "215/45R17",
-    },
-    {
-      id: 3,
-      brand: "apollo",
-      vehicleType: "Car",
-      name: "Amazer 4g life",
-      image: "/assets/images/img_main.jpg",
-      logo: "/assets/images/apollo-logo.png",
-      rating: 4.5,
-      reviews: 10,
-      price: "3,800",
-      quantity: 1,
-      warranty: 0,
-      onSale: true,
-      tubes: "Tubeless",
-      size: "215/45R17",
-      salePrice: "3,000",
-    },
-    {
-      id: 3,
-      brand: "mrf",
-      vehicleType: "Car",
-      name: "Amazer 4g life",
-      image: "/assets/images/img_main.jpg",
-      logo: "/assets/images/mrf-logo.png",
-      rating: 4.5,
-      reviews: 10,
-      price: "3,800",
-      quantity: 1,
-      warranty: 0,
-      onSale: true,
-      tubes: "Tubeless",
-      size: "215/45R17",
-      salePrice: "3,000",
-    },
-  ]);
+  const [tyres, setTyres] = useState(tyresData);
   const [loading, setLoading] = useState(false);
+
   const loadMore = () => {
     setLoading(true);
     setTimeout(() => {
@@ -78,9 +172,11 @@ export default function Tyres() {
       setTyres([...tyres, ...tyres]);
     }, 2000);
   };
+
   return (
     <section className="rounded bg-white shadow overflow-hidden p-4">
       <h3 className="text-xl font-medium">Tyres available</h3>
+      <p className="text-xs text-neutral-500">Find the best tyre for you</p>
       <Filters />
       <ul className="grid grid-cols-1 gap-4 mt-4 w-full sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {tyres.map((tyre) => (
@@ -99,148 +195,3 @@ export default function Tyres() {
     </section>
   );
 }
-const Filters = () => {
-  const brands = [
-    { value: "MRF", label: "MRF" },
-    { value: "Apollo", label: "Apollo" },
-    { value: "JK Tyre", label: "JK Tyre" },
-    { value: "CEAT", label: "CEAT" },
-    { value: "Birla Tyres", label: "Birla Tyres" },
-    { value: "BKT", label: "BKT" },
-    { value: "TVS Tyres", label: "TVS Tyres" },
-    { value: "Goodyear India", label: "Goodyear India" },
-    { value: "Metro Tyres", label: "Metro Tyres" },
-    { value: "MRL Tyres", label: "MRL Tyres" },
-  ];
-  const vehicleType = [
-    { value: "car", label: "Car" },
-    { value: "bike", label: "Bike" },
-  ];
-  const sortBy = [
-    { value: "popular", label: "Most popular" },
-    { value: "price-htl", label: "Price: High to Low" },
-    { value: "price-lth", label: "Price: Low to High" },
-    { value: "rating-lth", label: "Rating: Low to High" },
-    { value: "rating-htl", label: "Rating: High to Low" },
-  ];
-  return (
-    <div className="flex gap-2 mt-4 flex-wrap">
-      <Select
-        options={brands}
-        isSearchable={true}
-        name="brand"
-        className="basic-single w-56 text-sm"
-        placeholder="Brand"
-      />
-      <Select
-        options={vehicleType}
-        name="brand"
-        className="basic-single w-56 text-sm"
-        defaultValue={vehicleType[0].label}
-        placeholder="Vehicle type"
-      />
-      <Select
-        options={sortBy}
-        name="brand"
-        className="basic-single w-56 text-sm"
-        placeholder="Sort by"
-      />
-    </div>
-  );
-};
-const TyreCard = ({ tyre }) => {
-  return (
-    <li className="flex flex-col border border-neutral-300 rounded-md bg-white text-sm relative overflow-hidden justify-between hover:cursor-pointer hover:shadow transition hover:border-accent">
-      <CardTop tyre={tyre} />
-      <CardBottom tyre={tyre} />
-    </li>
-  );
-};
-
-const CardTop = ({ tyre }) => {
-  return (
-    <div className="bg-accent/5 relative items-center justify-center flex py-6">
-      <img
-        loading="lazy"
-        src="/assets/images/img_main.png"
-        alt="heart"
-        width={100}
-        className="drop-shadow"
-      />
-      <div className="absolute left-0 bottom-0 p-2 bg-white rounded-r-full overflow-hidden shadow-sm">
-        <img loading="lazy" src={tyre.logo} width={50} />
-      </div>
-      <div className="bg-neutral-900/100 w-12 h-1 absolute bottom-4 blur rounded-full"></div>
-      <div className="absolute top-0 right-0 flex flex-col items-end gap-1">
-        {tyre.warranty > 0 && (
-          <span className="inline-flex text-xs bg-yellow-400/75 p-1 pl-3 font-medium text-neutral-950 rounded-l-full gap-1">
-            {tyre.warranty} years warranty{" "}
-            <img
-              loading="lazy"
-              src="/assets/svg-icons/shield-check.svg"
-              width={15}
-              height={15}
-            />
-          </span>
-        )}
-        {tyre.onSale && (
-          <span className="inline-flex text-xs bg-green-500/75 p-1 pl-2 font-medium text-neutral-950 rounded-l-full gap-1">
-            Offers available
-            <img
-              loading="lazy"
-              src="/assets/svg-icons/discount.svg"
-              width={17}
-              height={17}
-            />
-          </span>
-        )}
-      </div>
-    </div>
-  );
-};
-
-const CardBottom = ({ tyre }) => {
-  return (
-    <div className="flex bg-slate-100 flex-col p-2 items-start border-t gap-2">
-      <div className="flex flex-col gap-2">
-        <div className="text-md font-medium uppercase pl-1">{tyre.name}</div>
-        <div className="flex gap-2 mb-4 flex-wrap">
-          <div className="text-xs p-1 px-3 text-neutral-900 shadow bg-white rounded w-fit">
-            {tyre.size}
-          </div>
-          <div className="text-xs p-1 px-3 text-neutral-900 shadow bg-white rounded w-fit">
-            {tyre.tubes}
-          </div>
-        </div>
-      </div>
-      <div className="flex gap-2 items-center hover:cursor-pointer">
-        <span className="inline-flex gap-1 text-white font-semibold bg-green-600 text-xs rounded-sm px-1 py-0.5 shadow-sm">
-          {tyre.rating}
-          <img
-            loading="lazy"
-            src="/assets/svg-icons/star-blocky.svg"
-            alt="star"
-            className="invert"
-            width={10}
-            height={10}
-          ></img>
-        </span>
-        <span className="text-xs font-bold text-neutral-500">
-          {tyre.reviews} Ratings
-        </span>
-      </div>
-      {tyre.salePrice ? (
-        <div className="text-2xl text-neutral-800 flex gap-2 items-baseline">
-          <span className="text-accent font-medium">₹{tyre.salePrice}</span>
-          <span className="text-lg">
-            <del>₹{tyre.price}</del>
-          </span>
-        </div>
-      ) : (
-        <div className="text-2xl font-medium text-neutral-800">
-          ₹{tyre.price}
-        </div>
-      )}
-    </div>
-  );
-};
