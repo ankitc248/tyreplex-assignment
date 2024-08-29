@@ -121,7 +121,7 @@ const Filters = () => {
     { value: "price-htl", label: "Price: High to Low" },
     { value: "price-lth", label: "Price: Low to High" },
     { value: "rating-lth", label: "Rating: Low to High" },
-    { value: "rating-lth", label: "Rating: Low to High" },
+    { value: "rating-htl", label: "Rating: High to Low" },
   ];
   return (
     <div className="flex gap-2 mt-4 flex-wrap">
@@ -161,20 +161,22 @@ const CardTop = ({ tyre }) => {
   return (
     <div className="bg-accent/5 relative items-center justify-center flex py-6">
       <img
+        loading="lazy"
         src="/assets/images/img_main.png"
         alt="heart"
         width={100}
         className="drop-shadow"
       />
       <div className="absolute left-0 bottom-0 p-2 bg-white rounded-r-full overflow-hidden shadow-sm">
-        <img src={tyre.logo} width={50} />
+        <img loading="lazy" src={tyre.logo} width={50} />
       </div>
-      <div className="bg-neutral-900/60 w-16 h-1 absolute bottom-4 blur rounded-full"></div>
+      <div className="bg-neutral-900/100 w-12 h-1 absolute bottom-4 blur rounded-full"></div>
       <div className="absolute top-0 right-0 flex flex-col items-end gap-1">
         {tyre.warranty > 0 && (
           <span className="inline-flex text-xs bg-yellow-400/75 p-1 pl-3 font-medium text-neutral-950 rounded-l-full gap-1">
             {tyre.warranty} years warranty{" "}
             <img
+              loading="lazy"
               src="/assets/svg-icons/shield-check.svg"
               width={15}
               height={15}
@@ -184,7 +186,12 @@ const CardTop = ({ tyre }) => {
         {tyre.onSale && (
           <span className="inline-flex text-xs bg-green-500/75 p-1 pl-2 font-medium text-neutral-950 rounded-l-full gap-1">
             Offers available
-            <img src="/assets/svg-icons/discount.svg" width={17} height={17} />
+            <img
+              loading="lazy"
+              src="/assets/svg-icons/discount.svg"
+              width={17}
+              height={17}
+            />
           </span>
         )}
       </div>
@@ -210,6 +217,7 @@ const CardBottom = ({ tyre }) => {
         <span className="inline-flex gap-1 text-white font-semibold bg-green-600 text-xs rounded-sm px-1 py-0.5 shadow-sm">
           {tyre.rating}
           <img
+            loading="lazy"
             src="/assets/svg-icons/star-blocky.svg"
             alt="star"
             className="invert"

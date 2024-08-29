@@ -7,7 +7,7 @@ export default {
         accent: "#E32329",
       },
       fontSize: {
-        xxs: "0.6rem",
+        xxs: "0.655rem",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

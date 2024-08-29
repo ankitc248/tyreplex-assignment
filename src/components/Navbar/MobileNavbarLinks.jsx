@@ -26,12 +26,10 @@ const MobileNavbarLinks = ({ links, showNavbar, setShowNavbar }) => {
 
 const NavbarHeader = ({ setShowNavbar }) => (
   <div className="flex justify-between p-4 items-start">
-    <img src="/assets/images/TP-logo.png" alt="logo" />
-    <button
-      type="button"
-      onClick={() => setShowNavbar(false)}
-    >
+    <img loading="lazy" src="/assets/images/TP-logo.png" alt="logo" />
+    <button type="button" onClick={() => setShowNavbar(false)}>
       <img
+        loading="lazy"
         src="/assets/svg-icons/close.svg"
         alt="close"
         width={25}
@@ -72,6 +70,7 @@ const ExternalLink = ({ details }) => (
   >
     {details.title}
     <img
+      loading="lazy"
       src="/assets/svg-icons/chevron-up.svg"
       alt="link"
       width={13}
@@ -114,6 +113,7 @@ const LinkWithDropdown = ({
 
 const DropdownIcon = ({ showDropDown }) => (
   <img
+    loading="lazy"
     src={
       showDropDown
         ? "/assets/svg-icons/minus.svg"
@@ -148,12 +148,13 @@ const DropdownItem = ({ item }) => (
     <span className="flex gap-2 text-sm">
       {item.name}
       {item.sticker && (
-        <span className="text-xs text-white p-1 bg-accent rounded-sm">
+        <span className="text-xxs uppercase text-white px-2 bg-accent rounded-sm">
           {item.sticker}
         </span>
       )}
     </span>
     <img
+      loading="lazy"
       src="/assets/svg-icons/chevron-up.svg"
       alt="link"
       width={10}

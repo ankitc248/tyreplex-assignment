@@ -9,8 +9,8 @@ export default function Services() {
     <section className="rounded bg-white shadow overflow-hidden p-4">
       <h3 className="text-xl font-medium">Services offered</h3>
       <p className="text-neutral-500 text-xs">
-        Wide range of expert services, from maintenance and repairs
-        to custom solutions, ensuring top performance and customer satisfaction.
+        Wide range of expert services, from maintenance and repairs to custom
+        solutions, ensuring top performance and customer satisfaction.
       </p>
       <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex-wrap mt-4 gap-4">
         {services.map((service, index) => (
@@ -23,6 +23,7 @@ export default function Services() {
               <div className="inline-flex gap-1 text-xs items-center opacity-0 group-hover:animate-swipe-in text-neutral-600">
                 Book now
                 <img
+                  loading="lazy"
                   src="/assets/svg-icons/chevron-up.svg"
                   alt="arrow"
                   className="rotate-90 contrast-0 group-hover:animate-swipe-in-arrow opacity-0"

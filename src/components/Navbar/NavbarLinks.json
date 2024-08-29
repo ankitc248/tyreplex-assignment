@@ -7,10 +7,10 @@
         {
           "name": "MRF Tyres",
           "link": "https://www.tyreplex.com/tyre-dealers-in-india/mrf-tyres",
-          "sticker": "Sale"
+          "sticker": "SALE"
         },
         {
-          "name": "Ceat Tyres",
+          "name": "CEAT Tyres",
           "link": "https://www.tyreplex.com/tyre-dealers-in-india/ceat-tyres"
         },
         {
@@ -34,7 +34,7 @@
           "link": "https://www.tyreplex.com/tyre-dealers-in-india/mrf-tyres"
         },
         {
-          "name": "Ceat Tyres",
+          "name": "CEAT Tyres",
           "link": "https://www.tyreplex.com/tyre-dealers-in-india/ceat-tyres"
         },
         {
@@ -47,7 +47,7 @@
           "sticker": "New"
         },
         {
-          "name": "Bridgestone Tyres",
+          "name": "Goodyear Tyres",
           "link": "https://www.tyreplex.com/tyre-dealers-in-india/bridgestone-tyres"
         }
       ]
@@ -74,20 +74,17 @@
     "dropdown": {
       "items": [
         {
-          "name": "MRF Tyres",
-          "link": "https://www.tyreplex.com/tyre-dealers-in-india/mrf-tyres"
+          "name": "Batteries",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/mrf-tyres",
+          "sticker": "50% OFF"
         },
         {
-          "name": "Ceat Tyres",
+          "name": "Alloy wheels",
           "link": "https://www.tyreplex.com/tyre-dealers-in-india/ceat-tyres"
         },
         {
-          "name": "Apollo Tyres",
+          "name": "More Accessories",
           "link": "https://www.tyreplex.com/tyre-dealers-in-india/apollo-tyres"
-        },
-        {
-          "name": "Bridgestone Tyres",
-          "link": "https://www.tyreplex.com/tyre-dealers-in-india/bridgestone-tyres"
         }
       ]
     }
@@ -97,19 +94,27 @@
     "dropdown": {
       "items": [
         {
-          "name": "MRF Tyres",
+          "name": "Cashback Offer",
           "link": "https://www.tyreplex.com/tyre-dealers-in-india/mrf-tyres"
         },
         {
-          "name": "Ceat Tyres",
+          "name": "Find Tyre Dealers",
           "link": "https://www.tyreplex.com/tyre-dealers-in-india/ceat-tyres"
         },
         {
-          "name": "Apollo Tyres",
+          "name": "Compare Tyres",
           "link": "https://www.tyreplex.com/tyre-dealers-in-india/apollo-tyres"
         },
         {
-          "name": "Bridgestone Tyres",
+          "name": "Are you a Dealer?",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/bridgestone-tyres"
+        },
+        {
+          "name": "Wheel Balancing",
+          "link": "https://www.tyreplex.com/tyre-dealers-in-india/bridgestone-tyres"
+        },
+        {
+          "name": "Wheel Alignment",
           "link": "https://www.tyreplex.com/tyre-dealers-in-india/bridgestone-tyres"
         }
       ]

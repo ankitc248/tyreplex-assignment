@@ -80,7 +80,7 @@ function DropDownItem({ item }) {
       >
         {item.name}
         {item.sticker && (
-          <span className="text-xs text-white p-1 bg-accent rounded-sm">
+          <span className="text-xxs uppercase text-white px-1 bg-accent rounded-sm">
             {item.sticker}
           </span>
         )}

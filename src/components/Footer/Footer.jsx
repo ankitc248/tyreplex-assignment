@@ -23,6 +23,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col items-end gap-2 order-1 sm:order-2">
           <img
+            loading="lazy"
             src="/assets/images/TP-logo.png"
             alt="logo"
             width={100}
@@ -36,6 +37,7 @@ export default function Footer() {
           <div className="flex gap-2">
             <a href="#">
               <img
+                loading="lazy"
                 src="/assets/svg-icons/facebook.svg"
                 className="contrast-50"
                 alt="facebook"
@@ -44,6 +46,7 @@ export default function Footer() {
             </a>
             <a href="#">
               <img
+                loading="lazy"
                 src="/assets/svg-icons/instagram.svg"
                 className="contrast-50"
                 alt="instagram"

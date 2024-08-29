@@ -127,6 +127,7 @@ const ReviewCard = ({ review }) => {
         <span className="flex gap-1 items-center">
           {review.rating}
           <img
+            loading="lazy"
             src="/assets/svg-icons/star-filled.svg"
             alt="star"
             width={12}
@@ -157,6 +158,7 @@ const StarBlock = ({ rating }) => {
     <div className="flex gap-1">
       {[1, 2, 3, 4, 5].map((index) => (
         <img
+          loading="lazy"
           key={index}
           src={getStarType(index)}
           alt="star"
