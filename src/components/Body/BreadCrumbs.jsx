@@ -7,11 +7,11 @@ export default function BreadCrumbs() {
   ];
   const activeBreadCrumb = breadCrumbs[breadCrumbs.length - 1];
   return (
-    <div className="flex items-center gap-2 overflow-hidden text-ellipsis px-2">
+    <div className="items-center gap-2 overflow-hidden text-ellipsis px-2 flex-wrap hidden md:flex">
       {breadCrumbs.map((breadCrumb, index) => (
         <span
           key={index}
-          className={`text-sm font-medium text-neutral-500 capitalize hover:font-semibold hover:cursor-pointer whitespace-nowrap ${
+          className={`text-sm font-medium text-neutral-500 capitalize hover:font-semibold hover:cursor-pointer ${
             activeBreadCrumb === breadCrumb ? "font-semibold" : ""
           }`}
         >

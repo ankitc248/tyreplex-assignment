@@ -32,6 +32,7 @@
 
 a:hover {
   color: var(--accent-color);
+  cursor: pointer;
 }
 
 body {
@@ -43,7 +44,6 @@ body {
   background-color: var(--body-color);
   color: #242424;
   overflow-x: hidden;
-  padding-bottom: 5rem;
 }
 
 @media (prefers-color-scheme: light) {

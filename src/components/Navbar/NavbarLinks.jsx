@@ -1,7 +1,7 @@
 import { useState } from "react";
 export default function NavbarLinks({ links }) {
   return (
-    <ul className="flex gap-2">
+    <ul className="gap-2 flex-wrap hidden lg:flex">
       {links.map((details, index) => (
         <NavbarLink details={details} key={index} index={index} />
       ))}
