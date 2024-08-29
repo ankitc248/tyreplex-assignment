@@ -25,18 +25,17 @@ const MobileNavbarLinks = ({ links, showNavbar, setShowNavbar }) => {
 };
 
 const NavbarHeader = ({ setShowNavbar }) => (
-  <div className="flex justify-between p-4">
+  <div className="flex justify-between p-4 items-start">
     <img src="/assets/images/TP-logo.png" alt="logo" />
     <button
       type="button"
       onClick={() => setShowNavbar(false)}
-      className="contrast-50"
     >
       <img
         src="/assets/svg-icons/close.svg"
         alt="close"
-        width={20}
-        height={20}
+        width={25}
+        height={25}
       />
     </button>
   </div>
@@ -169,13 +168,13 @@ const LoginSignUpButtons = () => {
     <div className="flex p-2 gap-2">
       <button
         type="button"
-        className="border-2 flex-1 border-accent bg-accent text-white rounded  p-1 text-sm font-medium"
+        className="border-2 flex-1 border-accent bg-accent text-white rounded p-2 text-sm font-medium"
       >
         Login
       </button>
       <button
         type="button"
-        className="border-2 flex-1 border-accent text-accent rounded bg-white p-1 text-sm font-medium"
+        className="border-2 flex-1 border-accent text-accent rounded bg-white p-2 text-sm font-medium"
       >
         Signup
       </button>

@@ -16,7 +16,7 @@ export default function Services() {
         {services.map((service, index) => (
           <li
             key={index}
-            className="text-sm rounded shadow border border-neutral-300 group font-medium text-neutral-600 capitalize hover:font-semibold hover:cursor-pointer hover:bg-slate-100 bg-slate-50"
+            className="text-sm rounded shadow-sm border border-neutral-300 group font-medium text-neutral-600 capitalize hover:font-semibold hover:cursor-pointer hover:bg-slate-100 bg-slate-50"
           >
             <a href="#" className="flex justify-between p-3 whitespace-nowrap">
               {service.toLocaleLowerCase()}
