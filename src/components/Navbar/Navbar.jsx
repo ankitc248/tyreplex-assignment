@@ -28,11 +28,11 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`bg-white flex w-dvw justify-center content-center shadow shadow-gray-300 sticky top-0 z-50 ${
+        className={`bg-white flex w-dvw justify-center content-center border-b border-neutral-300 sm:border-0 sm:shadow shadow-gray-300 sticky top-0 z-20 ${
           isVisible ? "" : "-translate-y-full"
         } transition-all`}
       >
-        <div className="max-w-screen-xl w-dvw flex justify-between items-center flex-wrap px-4 py-4 lg:py-0">
+        <div className="max-w-screen-xl w-dvw flex justify-between items-center flex-wrap px-4 py-2 lg:py-0">
           <Logo />
           <NavbarLinks links={navbarLinks} />
           <button
@@ -43,8 +43,8 @@ export default function Navbar() {
             <img
               loading="lazy"
               src="/assets/svg-icons/menu-fries.svg"
-              width={36}
-              height={36}
+              width={30}
+              height={30}
             />
           </button>
           <LoginButton />
@@ -69,6 +69,7 @@ function Logo() {
           className="inline-block"
           alt="Tyre plex"
           height={200}
+          width={100}
         />
       </a>
     </div>

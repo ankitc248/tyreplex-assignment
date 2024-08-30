@@ -6,7 +6,7 @@ export default function Services() {
     "Punctures",
   ];
   return (
-    <section className="rounded bg-white shadow overflow-hidden p-4">
+    <section className="sm:rounded bg-white sm:shadow overflow-hidden p-4">
       <h3 className="text-xl font-medium">Services offered</h3>
       <p className="text-neutral-500 text-xs">
         Wide range of expert services, from maintenance and repairs to custom

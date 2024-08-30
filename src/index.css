@@ -45,3 +45,9 @@ body {
   color: #242424;
   overflow-x: hidden;
 }
+
+@media screen and (max-width: 640px) {
+  body {
+    background-color: #FFF;
+  }
+}

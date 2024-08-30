@@ -96,7 +96,7 @@ const FooterLinks = () => {
 
 export default function Footer() {
   return (
-    <footer className="rounded-t bg-white shadow overflow-hidden">
+    <footer className="rounded-t bg-white shadow overflow-hidden border-t sm:border-0">
       <div className="flex justify-between flex-wrap p-4 items-start gap-4">
         <FooterQuestionSection />
         <FooterLogo />

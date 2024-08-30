@@ -147,7 +147,7 @@ export default function Reviews() {
 
   return (
     <section
-      className="rounded bg-white shadow overflow-hidden p-4"
+      className="sm:rounded bg-white sm:shadow overflow-hidden p-4"
       id="reviewsSection"
     >
       <ReviewHeader totalRating={totalRating} totalReviews={totalReviews} />

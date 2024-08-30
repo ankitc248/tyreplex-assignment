@@ -11,7 +11,7 @@ const Shop = () => {
   const reviews = 2278;
 
   return (
-    <section className="rounded bg-white shadow overflow-hidden">
+    <section className="sm:rounded bg-white sm:shadow overflow-hidden">
       <div className="flex justify-between flex-wrap">
         <ShopDetails
           shopName={shopName}
@@ -51,7 +51,7 @@ const ShopDetails = ({
 
 const ShopHeader = ({ shopName, rating, reviews }) => (
   <>
-    <h1 className="text-2xl font-medium capitalize px-5">
+    <h1 className="text-xl sm:text-2xl font-medium capitalize px-5">
       {shopName.toLocaleLowerCase()}
     </h1>
     <div className="flex gap-2 flex-wrap px-5 items-center">

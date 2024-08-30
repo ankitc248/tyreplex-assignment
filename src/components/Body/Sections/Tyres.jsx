@@ -17,7 +17,7 @@ export default function Tyres() {
   };
 
   return (
-    <section className="rounded bg-white shadow overflow-hidden p-4">
+    <section className="sm:rounded bg-white sm:shadow overflow-hidden p-4">
       <h3 className="text-xl font-medium">Tyres available</h3>
       <p className="text-xs text-neutral-500">Find the best tyre for you</p>
       <Filters />

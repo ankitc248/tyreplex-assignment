@@ -49,7 +49,7 @@ function NavbarLink({ details, index }) {
 function DropDownMenu({ details, direction }) {
   return (
     <div
-      className={`absolute top-[56px] z-10 ${direction} bg-white rounded-b text-sm shadow shadow-gray-300 p-2 w-max animate-swipe-up opacity-0 z-50`}
+      className={`absolute top-[56px] z-10 ${direction} bg-neutral-700 text-white rounded-b-xl text-sm shadow shadow-neutral-950 p-2 w-max animate-swipe-up opacity-0 z-50`}
     >
       {details.dropDownTitle && (
         <span className="inline-block p-3 uppercase w-auto text-xs font-semibold">
@@ -74,7 +74,7 @@ function DropDownItem({ item }) {
     <li className="rounded">
       <a
         href={item.link}
-        className="text-inherit p-3 flex justify-between items-center hover:bg-slate-100 rounded hover:cursor-pointer gap-2"
+        className="text-inherit p-3 flex justify-between items-center hover:bg-slate-100 rounded hover:cursor-pointer gap-2 transition-colors"
         target="_blank"
         rel="noopener noreferrer"
       >
