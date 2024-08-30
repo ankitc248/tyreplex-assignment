@@ -42,7 +42,7 @@ const NavbarHeader = ({ setShowNavbar }) => (
       src="/assets/images/TP-logo.png"
       alt="logo"
       width={100}
-      className="bg-white p-2 rounded-sm"
+      className="bg-white p-2 rounded-sm opacity-0"
     />
     <button type="button" onClick={() => setShowNavbar(false)}>
       <img
@@ -185,7 +185,7 @@ const DropdownItem = ({ item }) => (
 
 const LoginSignUpButtons = () => {
   return (
-    <div className="flex p-2 gap-2">
+    <div className="flex p-1 px-3 gap-2">
       <button
         type="button"
         className="border-2 flex-1 border-accent bg-accent text-white rounded p-2 text-sm font-medium shadow shadow-neutral-950"
@@ -194,7 +194,7 @@ const LoginSignUpButtons = () => {
       </button>
       <button
         type="button"
-        className="border-2 flex-1 border-accent text-accent rounded bg-neutral-200 p-2 text-sm font-medium shadow shadow-neutral-950"
+        className="border-2 flex-1 border-accent text-accent rounded bg-neutral-100 p-2 text-sm font-medium shadow shadow-neutral-950"
       >
         Signup
       </button>
