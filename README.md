@@ -1,6 +1,6 @@
 ## Tyreplex Redesign
 
-Redesigned tyreplex.com for an assignment given by the same company. Got no response back.
+Redesigned tyreplex.com for an assignment given by the same company. Made the site more responsive and visually pleasing. Got no response back.
 
 ### Compare
 
