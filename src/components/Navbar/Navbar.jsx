@@ -2,6 +2,7 @@ import navbarLinks from "./NavbarLinks.json";
 import NavbarLinks from "./NavbarLinks";
 import { useState, useEffect, useCallback } from "react";
 import MobileNavbarLinks from "./MobileNavbarLinks";
+import ModernNavbar from "./ModernNavbar";
 export default function Navbar() {
   const [showNavbar, setShowNavbar] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -32,6 +33,7 @@ export default function Navbar() {
           isVisible ? "" : "-translate-y-full"
         } transition-all`}
       >
+        <ModernNavbar />
         <div className="max-w-screen-xl w-dvw flex justify-between items-center flex-wrap px-4 py-2 lg:py-0">
           <Logo />
           <NavbarLinks links={navbarLinks} />
@@ -45,6 +47,7 @@ export default function Navbar() {
               src="/assets/svg-icons/menu-fries.svg"
               width={30}
               height={30}
+              alt="menu"
             />
           </button>
           <LoginButton />

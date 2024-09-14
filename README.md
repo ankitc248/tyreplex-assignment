@@ -1,8 +1,13 @@
-# React + Vite
+## Tyreplex Redesign
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Redesigned tyreplex.com for an assignment given by the same company. Got no response back.
 
-Currently, two official plugins are available:
+### Compare
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[My Redesign](https://tyreplex-assignment-opal.vercel.app)
+
+![New design](/new-design.png)
+
+[Old / Current Site](https://www.tyreplex.com/tyre-dealers-in-india/shree-hemkunt-tyres-and-services)
+
+![Old design](/old-design.png)
